@@ -7,8 +7,8 @@ $ sudo apt install -y vim mosh tmux htop git curl wget unzip zip build-essential
 ```shell
 $ sudo nano /etc/ssh/ssh_config
   AllowUsers student
-PermitRootLogin no
-PasswordAuthentication no
+  PermitRootLogin no
+  PasswordAuthentication no
 
 $ sudo systemctl restart ssh
 ```
