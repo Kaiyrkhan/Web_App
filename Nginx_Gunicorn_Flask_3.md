@@ -1,7 +1,7 @@
 
 ```shell
 $ sudo apt update
-$ sudo apt install -y vim mosh tmux htop git curl wget unzip zip
+$ sudo apt install -y vim mosh tmux htop git curl wget unzip zip build-essential make
 ```
 
 ```shell
