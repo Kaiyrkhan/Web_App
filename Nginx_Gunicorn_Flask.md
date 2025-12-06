@@ -1,11 +1,11 @@
 # Production ортада Python App (Flask/Django) конфигурациялау
 
-Client → Nginx → Gunicorn (WSGI server) → Python App (WSGI application)
+Client → Nginx → Gunicorn (WSGI server) → Python App (WSGI application)  
 
-Nginx — HTTP server + Reverse proxy
-Gunicorn — WSGI server / Application server
-Python App — WSGI application
-Flask/Django — Python Framework
+Nginx — HTTP server + Reverse proxy  
+Gunicorn — WSGI server / Application server  
+Python App — WSGI application  
+Flask/Django — Python Framework  
 
 ```shell
 Жоба құрылымы
