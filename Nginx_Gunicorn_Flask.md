@@ -81,6 +81,8 @@ WantedBy=multi-user.target
 ```
 > Мұндағы, 4 worker — орташа сервер үшін жақсы  
 
+> Gunicorn worker санын CPU cores бойынша орнату: **workers = (CPU_CORES * 2) + 1**  
+
 Service/Daemon-ды іске қосу
 ```shell
 $ sudo systemctl daemon-reload
