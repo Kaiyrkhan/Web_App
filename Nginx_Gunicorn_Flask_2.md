@@ -32,3 +32,4 @@ $ git clone https://github.com/Parth2k3/test-flask.git
 
 1) [How to Deploy a Python Flask App with Google Cloud Platform (GCP) on a Virtual Machine](https://vkvideo.ru/video-218944937_456241654)
 2) [GitHub ProgrammingKnowledge](https://github.com/Parth2k3/ProgrammingKnowledge/blob/main/GCP/flask-vm-deploy.txt)
+3) [How To Deploy Flask on Railway | Hosting a Flask web server on Railway](https://youtu.be/Ce_V-DSJae8)
