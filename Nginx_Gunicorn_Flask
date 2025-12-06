@@ -6,3 +6,21 @@ Nginx — HTTP server + Reverse proxy
 Gunicorn — WSGI server / Application server
 Python App — WSGI application
 Flask/Django — Python Framework
+
+```shell
+/var/www/flaskapp/
+│
+├── venv/
+├── app/
+│   ├── __init__.py
+│   └── main.py
+│
+├── wsgi.py
+└── requirements.txt
+```
+
+```shell
+```
+
+```shell
+```
