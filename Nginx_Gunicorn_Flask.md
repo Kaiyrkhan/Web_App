@@ -7,9 +7,8 @@ Gunicorn — WSGI server / Application server
 Python App — WSGI application  
 Flask/Django — Python Framework  
 
+### Жоба құрылымы
 ```shell
-Жоба құрылымы
-
 /var/www/flaskapp/
 │
 ├── venv/
@@ -21,7 +20,20 @@ Flask/Django — Python Framework
 └── requirements.txt
 ```
 
+### Flask application
+
+**app/main.py**
 ```shell
+from flask import Flask
+
+def create_app():
+    app = Flask(__name__)
+
+    @app.route("/")
+    def index():
+        return "Hello from Flask via Gunicorn & Nginx!"
+
+    return app
 ```
 
 ```shell
