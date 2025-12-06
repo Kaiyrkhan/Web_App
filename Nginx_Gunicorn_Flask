@@ -1,5 +1,8 @@
 # Production ортада Python App (Flask/Django) конфигурациялау
 
+Client → Nginx → Gunicorn (WSGI server) → Python App (WSGI application)
+
 Nginx — HTTP server + Reverse proxy
 Gunicorn — Application server (WSGI server)
-Flask/Django — Python App (WSGI application)
+Python App — WSGI application
+Flask/Django — Python Framework
