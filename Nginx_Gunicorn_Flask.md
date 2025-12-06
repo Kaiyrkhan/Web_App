@@ -81,7 +81,68 @@ WantedBy=multi-user.target
 ```
 > Мұндағы, 4 worker — орташа сервер үшін жақсы  
 
+Service/Daemon-ды іске қосу
 ```shell
+$ sudo systemctl daemon-reload
+$ sudo systemctl enable flaskapp
+$ sudo systemctl start flaskapp
+$ sudo systemctl status flaskapp
+```
+
+> Егер, жоғарыдағы конфигурациялар дұрыс болса, socket файлы пайда болады  
+```shell
+$ ls -l /var/www/flaskapp/
+flaskapp.sock
+```
+
+### Nginx конфигурациялау
+
+> Nginx-ті reverse proxy ретінде қолданамыз!  
+
+```shell
+$ sudo nano /etc/nginx/sites-available/flaskapp
+
+server {
+    listen 80;
+    server_name YOUR_SERVER_IP_OR_DOMAIN;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/var/www/flaskapp/flaskapp.sock;
+    }
+}
+```
+
+```shell
+$ sudo ln -s /etc/nginx/sites-available/flaskapp /etc/nginx/sites-enabled/
+```
+
+```shell
+$ sudo nginx -t
+$ sudo systemctl restart nginx
+```
+
+### Firewall (UFW)
+
+```shell
+$ sudo ufw allow 'Nginx Full'
+```
+
+```shell
+Browser -> http://SERVER_IP/
+
+Hello from Flask via Gunicorn & Nginx!
+```
+
+### Nginx rate-limiting (DDOS қорғау)
+```shell
+...
+```
+
+### HTTPS (Let’s Encrypt)
+```shell
+$ sudo apt install certbot python3-certbot-nginx
+$ sudo certbot --nginx -d yourdomain.com
 ```
 
 ```shell
