@@ -136,15 +136,18 @@ Browser -> http://SERVER_IP/
 Hello from Flask via Gunicorn & Nginx!
 ```
 
-### Nginx rate-limiting (DDOS қорғау)
-```shell
-...
-```
-
 ### HTTPS (Let’s Encrypt)
 ```shell
 $ sudo apt install certbot python3-certbot-nginx
 $ sudo certbot --nginx -d yourdomain.com
+```
+
+### Nginx Rate-Limiting (DDOS/Brute Force/Traffic limiting) конфигурациясы
+
+> Nginx Rate-Limiting — DDOS/Brute Force шабуылынан қорғау  
+
+```shell
+...
 ```
 
 ```shell
