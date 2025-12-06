@@ -36,5 +36,23 @@ def create_app():
     return app
 ```
 
+### WSGI application
+
+**wsgi.py**
+```shell
+from app.main import create_app
+
+app = create_app()
+
+if __name__ == "__main__":
+    app.run()
+```
+
+```shell
+```
+
+```shell
+```
+
 ```shell
 ```
