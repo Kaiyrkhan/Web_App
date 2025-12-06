@@ -3,7 +3,7 @@
 Client → Nginx → Gunicorn (WSGI server) → Python App (WSGI application)  
 
 Nginx — HTTP server + Reverse proxy  
-Gunicorn — WSGI server / Application server  
+Gunicorn — Application server / WSGI server  
 Python App — WSGI application  
 Flask/Django — Python Framework  
 
